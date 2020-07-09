@@ -8,7 +8,8 @@ from ed1x import XBRLParser, GAAP, GAAPSerializer, DEISerializer
 xbrl_parser = XBRLParser(precision=0)
 
 # Parse an incoming XBRL file
-xbrl = xbrl_parser.parse("sam-20130629.xml")
+# xbrl = xbrl_parser.parse("sam-20130629.xml")
+xbrl = xbrl_parser.parse("ubnt-20200331_htm.xml")
 
 # Parse just the GAAP data from the xbrl object
 gaap_obj = xbrl_parser.parseGAAP(xbrl,
