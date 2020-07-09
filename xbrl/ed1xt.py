@@ -13,7 +13,7 @@ xbrl = xbrl_parser.parse("ubnt-20200331_htm.xml")
 
 # Parse just the GAAP data from the xbrl object
 gaap_obj = xbrl_parser.parseGAAP(xbrl,
-                                 doc_date="20130629",
+                                 doc_date="20200331",
                                  context="current",
                                  ignore_errors=0)
 
@@ -22,7 +22,7 @@ serializer = GAAPSerializer()
 result = serializer.dump(gaap_obj)
 
 # Print out the serialized GAAP data
-print(result)
+print("\n\n",result)
 
 # Parse just the DEI data from the xbrl object
 dei_obj = xbrl_parser.parseDEI(xbrl)
@@ -32,10 +32,10 @@ serializer = DEISerializer()
 result = serializer.dump(dei_obj)
 
 # Print out the serialized DEI data
-print(result)
+print("\n\n",result)
 
 # Parse just the Custom data from the xbrl object
 custom_obj = xbrl_parser.parseCustom(xbrl)
 
 # Print out the Custom data as an array of tuples
-print(custom_obj())
+print("\n\n",custom_obj())
