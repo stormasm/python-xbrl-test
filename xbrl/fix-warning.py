@@ -1,3 +1,8 @@
+"""
+how to get rid of warning messages...
+https://docs.python.org/3/library/warnings.html#overriding-the-default-filter
+"""
+
 import sys
 
 if not sys.warnoptions:
